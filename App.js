@@ -1,24 +1,56 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-import Auth from './src/components/Auth';
-import HomePage from './src/components/HomePage';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { createAppContainer, createStackNavigator } from 'react-navigation';
 
 
-export default class App extends React.Component {
+class AuthScreen extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Auth />
-        <HomePage />
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Image</Text>
+        <Text>Enter Code</Text>
+        <Button
+          title='Submit Code'
+          onPress={() => this.props.navigation.navigate('HomePage')}
+        />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    margin: 100,
+
+class HomePage extends React.Component {
+  render() {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Welcome to the Main Page</Text>
+      <Button
+        title='Go Back'
+        onPress={() => this.props.navigation.navigate('AuthScreen')}
+      />
+      </View>
+    )
+  }
+}
+
+
+const RootStack = createStackNavigator({
+  AuthScreen: {
+    screen: AuthScreen,
   },
+  HomePage: {
+    screen: HomePage,
+  },
+}, {
+  initialRouteName: 'AuthScreen',
 });
+
+
+const AppContainer = createAppContainer(RootStack);
+
+
+export default class App extends React.Component {
+  render() {
+    return <AppContainer />;
+  }
+}
