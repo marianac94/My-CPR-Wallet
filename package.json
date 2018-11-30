@@ -7,11 +7,17 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "^31.0.2",
+    "expo": "^31.0.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-elements": "^1.0.0-beta7",
     "react-native-gesture-handler": "^1.0.10",
     "react-navigation": "^3.0.2"
+  },
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/Roboto"
+    ]
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

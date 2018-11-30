@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import { Font } from 'expo';
 
 
 export default class HomePage extends React.Component {
