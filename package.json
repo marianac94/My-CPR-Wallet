@@ -7,12 +7,27 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@babel/runtime": "^7.1.5",
     "expo": "^31.0.5",
+    "navigationbar-react-native": "0.0.5",
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react-native-dimension": "^1.0.6",
     "react-native-elements": "^1.0.0-beta7",
     "react-native-gesture-handler": "^1.0.10",
-    "react-navigation": "^3.0.2"
+    "react-native-ionicons": "^4.4.6",
+    "react-native-iphone-x-helper": "^1.2.0",
+    "react-native-material-bottom-navigation": "^1.0.2",
+    "react-native-navigation-bar": "^0.2.1",
+    "react-native-paper": "^2.2.8",
+    "react-native-phone-call": "^1.0.9",
+    "react-native-snap-carousel": "^3.7.5",
+    "react-native-swiper": "^1.5.14",
+    "react-native-tab-navigator": "^0.3.4",
+    "react-native-vector-icons": "^6.1.0",
+    "react-navigation": "^3.0.2",
+    "react-navigation-material-bottom-tabs": "^1.0.0",
+    "top-bar-nav": "^1.2.2"
   },
   "rnpm": {
     "assets": [
