@@ -1,6 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Image, TouchableOpacity, ScrollView, StatusBar } from 'react-native';
-import { createAppContainer, createStackNavigator } from 'react-navigation';
+
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity, TouchableHighlight, ScrollView, StatusBar, Platform, SafeAreaView, Container, Title, Footer, TabBarIOS, Component, AppRegistry } from 'react-native';
+
+import { Icon } from 'react-native-elements';
+
+import { createAppContainer, createStackNavigator, DrawerItems, HeaderBackButton, StackNavigator } from 'react-navigation';
+
 
 import AuthScreen from './app/components/Auth';
 import HomeScreen from './app/components/HomeScreen';
@@ -16,30 +21,222 @@ import CPR_Adult from './app/components/emergency/CPR_Adult';
 import CPR_Pet from './app/components/emergency/CPR_Pet';
 
 
-const RootStack = createStackNavigator({
-  AuthScreen: { screen: AuthScreen },
-  HomeScreen: { screen: HomeScreen },
-  Screen1: { screen: Screen1 },
-  Choose_Emer: { screen: Choose_Emer },
-  Before_Infant: { screen: Before_Infant },
-  Before_Child: { screen: Before_Child },
-  Before_Adult: { screen: Before_Adult },
-  Before_Pet: { screen: Before_Pet },
-  CPR_Infant: { screen: CPR_Infant },
-  CPR_Child: { screen: CPR_Child },
-  CPR_Adult: { screen: CPR_Adult },
-  CPR_Pet: { screen: CPR_Pet },
+class LogoTitle extends React.Component {
+  render() {
+    return (
+      <Image
+        source={require('./app/components/images/LogoIcon.png')}
+        style={{ width: 43, height: 43 }}
+      />
+    );
+  }
+}
+
+
+const RootStack = createStackNavigator(
+  {
+  AuthScreen: {
+    screen: AuthScreen,
+  },
+  HomeScreen: {
+    screen: HomeScreen,
+      navigationOptions: {
+        headerTitle: <LogoTitle />,
+        headerTitleStyle: {
+          color: '#fff',
+        },
+        headerBackTitleStyle: {
+            color: '#fff',
+        },
+        headerTintColor: '#fff',
+        headerStyle: {
+          backgroundColor: '#A50A0A',
+          height: 80,
+      },
+    },
+  },
+  Screen1: {
+    screen: Screen1,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  Choose_Emer: {
+    screen: Choose_Emer,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  Before_Infant: {
+    screen: Before_Infant,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  Before_Child: {
+    screen: Before_Child,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  Before_Adult: {
+    screen: Before_Adult,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  Before_Pet: {
+    screen: Before_Pet,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  CPR_Infant: {
+    screen: CPR_Infant,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  CPR_Child: {
+    screen: CPR_Child,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  CPR_Adult: {
+    screen: CPR_Adult,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
+  CPR_Pet: {
+    screen: CPR_Pet,
+    navigationOptions: {
+      headerTitle: <LogoTitle />,
+      headerTitleStyle: {
+        color: '#fff',
+      },
+      headerBackTitleStyle: {
+          color: '#fff',
+      },
+      headerTintColor: '#fff',
+      headerStyle: {
+        backgroundColor: '#A50A0A',
+        height: 80,
+    },
+  },
+  },
 },
-{ initialRouteName: 'AuthScreen', });
+  { initialRouteName: 'AuthScreen',
+  mode: Platform.OS === 'ios' ? 'modal' : 'card'
+  }
+)
 
 const AppContainer = createAppContainer(RootStack);
-
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <StatusBar hidden />
+      <View style={styles.safeArea}>
         <AppContainer />
       </View>
     )
@@ -47,8 +244,9 @@ export default class App extends React.Component {
 }
 
 
-const styles = {
-  container: {
+const styles = StyleSheet.create({
+  safeArea: {
     flex: 1,
+    backgroundColor: '#FF5236'
   },
-}
+})

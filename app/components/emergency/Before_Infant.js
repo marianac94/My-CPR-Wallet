@@ -18,11 +18,13 @@ export default class HomePage extends React.Component {
               resizeMode='cover'
             />
 
+          <TouchableHighlight style={styles.main_btn}>
             <Button
-            title='Start CPR'
-            onPress={() => this.props.navigation.navigate('CPR_Infant')}
-            color='#A50A0A'
+              title='Start CPR'
+              onPress={() => this.props.navigation.navigate('CPR_Infant')}
+              color='#FFFFFF'
             />
+            </TouchableHighlight>
 
           </View>
         </ScrollView>
@@ -39,5 +41,16 @@ export default class HomePage extends React.Component {
       width,
       height: 650,
       position: 'relative',
+      marginTop: 10,
+    },
+    main_btn: {
+      height: 40,
+      width: 350,
+      borderRadius: 8,
+      backgroundColor: '#A50A0A',
+      marginTop: 6,
+      marginLeft: 35,
+      marginRight: 10,
+      marginBottom: 60,
     }
   }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
-import { Text, View, Button, Image, TouchableHighlight, ScrollView } from 'react-native';
+import { Text, View, Button, Image, TouchableHighlight, ScrollView, StatusBar } from 'react-native';
 import { Input } from 'react-native-elements';
 import { Font } from 'expo';
 
-
 export default class AuthScreen extends React.Component {
+  static navigationOptions = { header: null }
+  static footer = { footer: null }
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 80 }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 200 }}>
+        <StatusBar style={styles.statusbar} />
 
         <Image
           source={require('./images/Logo.png')}
@@ -27,11 +29,17 @@ export default class AuthScreen extends React.Component {
         />
         </TouchableHighlight>
 
-          <Text style={{marginTop: 180, color:'#A50A0A'}}>
+          <Text style={{marginTop: 170, color:'#A50A0A'}}>
             “WE RISE BY LIFTING OTHERS”
           </Text>
 
       </View>
     );
   }
+}
+
+const styles = {
+  statusbar: {
+    color: '#FFFFFF',
+  },
 }
