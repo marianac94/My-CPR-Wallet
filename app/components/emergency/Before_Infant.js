@@ -4,16 +4,12 @@ import { NavigationBar } from 'navigationbar-react-native';
 import { SafeAreaView } from 'react-navigation';
 const { width, height } = Dimensions.get('window')
 
-import Timer from '../Timer'
-
 export default class HomePage extends React.Component {
   render() {
     return (
         <ScrollView>
           <StatusBar barStyle='light-content' />
           <View style={styles.container}>
-
-            <Timer />
 
             <Image
               style={styles.image}

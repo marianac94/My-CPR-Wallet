@@ -11,6 +11,8 @@ const { width, height } = Dimensions.get('window')
 // }
 // call(args).catch(console.error)
 
+import Timer from '../Timer';
+
 export default class HomePage extends React.Component {
   render() {
     return (
@@ -18,11 +20,13 @@ export default class HomePage extends React.Component {
           <StatusBar barStyle='light-content' />
           <View style={styles.container}>
 
-            <Image
-              style={styles.image}
-              source={require('../images/cpr_child.png')}
-              resizeMode='cover'
-            />
+          <Timer />
+
+          <Image
+            style={styles.image}
+            source={require('../images/cpr_child.png')}
+            resizeMode='cover'
+          />
 
           <TouchableHighlight style={styles.main_btn}>
             <Button

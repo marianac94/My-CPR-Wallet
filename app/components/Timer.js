@@ -37,7 +37,7 @@ class Timer extends React.Component {
     let start = (this.state.time == 0) ?
       <Button
         title='start'
-        onClick={this.startTimer}
+        onPress={this.startTimer}
         /> :
       null
 
@@ -45,21 +45,21 @@ class Timer extends React.Component {
       null :
       <Button
         title='stop'
-        onClick={this.stopTimer}
+        onPress={this.stopTimer}
       />
 
     let resume = (this.state.time == 0 || this.state.isOn) ?
       null :
       <Button
         title='resume'
-        onClick={this.startTimer}
+        onPress={this.startTimer}
       />
 
     let reset = (this.state.time == 0 || this.state.isOn) ?
       null :
       <Button
         title='reset'
-        onClick={this.resetTimer}
+        onPress={this.resetTimer}
       />
 
     return(
