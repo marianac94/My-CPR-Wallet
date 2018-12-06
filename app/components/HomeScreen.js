@@ -1,24 +1,16 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, Button, TouchableHighlight, Image, Animated, Dimensions, ScrollView, StatusBar, TouchableOpacity, SafeAreaView, Platform } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableHighlight, Image, Animated, Dimensions, ScrollView, StatusBar, TouchableOpacity, SafeAreaView, Platform, Footer, Title, Container, FooterTab, Icon } from 'react-native';
 import { Constants } from 'expo';
+import { NavigationBar } from 'navigationbar-react-native';
 import Swiper from 'react-native-swiper'
 import call from 'react-native-phone-call'
 const { width, height } = Dimensions.get('window')
-import { NavigationBar } from 'navigationbar-react-native';
-
-// Make the call to 911 (only mobile friendy)
-// const args = {
-//   number: '911', // String value with the number to call
-//   prompt: true // Optional boolean property. Determines if the user should be prompt prior to the call
-// }
-// call(args).catch(console.error)
 
 export default class HomePage extends React.Component {
   render() {
     return (
     <ScrollView>
       <View style={styles.fixBackground}>
-
         <StatusBar barStyle='light-content' />
 
           <Swiper style={styles.wrapper}
@@ -42,14 +34,23 @@ export default class HomePage extends React.Component {
           </View>
         </Swiper>
 
+
         <TouchableHighlight
-          style={{ height: 40, width: 320, borderRadius: 8, backgroundColor: '#A50A0A', marginTop: 30, marginLeft: 25, marginRight: 5, }}>
+          style={{ height: 40, width: 320, borderRadius: 8, backgroundColor: '#A50A0A', marginTop: 20, marginLeft: 25, marginRight: 5 }}>
         <Button
           title='Emergency'
           onPress={() => this.props.navigation.navigate('Choose_Emer')}
           color='#FFFFFF'
         />
         </TouchableHighlight>
+
+        <View>
+          <Image style={styles.footerImg} source={require('./images/footer.png')} resizeMode='cover' />
+        </View>
+
+        <View>
+          <Image style={styles.icons1} source={require('./images/icon4.png')} />
+        </View>
 
         </View>
       </ScrollView>
@@ -78,5 +79,18 @@ const styles = {
     height: 550,
     marginBottom: 10,
     marginTop: 50,
+  },
+  wrapper: {
+    marginBottom: 10,
+    marginTop: -30,
+  },
+  icons1: {
+    position: 'absolute',
+    marginTop: 40,
+    marginLeft: 60,
+  },
+  footerImg: {
+    position: 'absolute',
+    marginTop: 20,
   },
 }

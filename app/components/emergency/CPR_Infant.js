@@ -4,13 +4,20 @@ import { NavigationBar } from 'navigationbar-react-native';
 import { SafeAreaView } from 'react-navigation';
 const { width, height } = Dimensions.get('window')
 
+// Make the call to 911 (only mobile friendy)
+// const args = {
+//   number: '911', // String value with the number to call
+//   prompt: true // Optional boolean property. Determines if the user should be prompt prior to the call
+// }
+// call(args).catch(console.error)
 
 export default class HomePage extends React.Component {
   render() {
     return (
         <ScrollView>
-        <StatusBar hidden />
+          <StatusBar barStyle='light-content' />
           <View style={styles.container}>
+
 
             <Image
               style={styles.image}
@@ -36,22 +43,20 @@ export default class HomePage extends React.Component {
   const styles = {
     container: {
       flex: 1,
-      paddingTop: -20,
     },
     image: {
       width,
       height: 650,
       position: 'relative',
-      marginTop: 20,
+      marginTop: -60,
     },
     main_btn: {
       height: 40,
-      width: 350,
+      width: 320,
       borderRadius: 8,
       backgroundColor: '#A50A0A',
-      marginTop: 6,
-      marginLeft: 35,
+      marginTop: -40,
+      marginLeft: 28,
       marginRight: 10,
-      marginBottom: 60,
     },
   }

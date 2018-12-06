@@ -60,12 +60,19 @@ export default class MyCarousel extends React.Component {
             </View>
 
           </Carousel>
+
+          <View>
+            <Image style={styles.footerImg} source={require('./../images/footer.png')} resizeMode='cover' />
+          </View>
+
+          <View>
+            <Image style={styles.icons1} source={require('./../images/icon4.png')} />
+          </View>
         </View>
       </ScrollView>
       )
     }
   }
-
 
 
   const styles = {
@@ -84,5 +91,14 @@ export default class MyCarousel extends React.Component {
       height: 300,
       marginTop: 560,
       marginLeft: 38,
+    },
+    icons1: {
+      position: 'absolute',
+      marginTop: 40,
+      marginLeft: 60,
+    },
+    footerImg: {
+      position: 'absolute',
+      marginTop: 20,
     },
   }

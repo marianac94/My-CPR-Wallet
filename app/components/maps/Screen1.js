@@ -69,7 +69,7 @@ export default class Screen1 extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-              <StatusBar hidden />
+              <StatusBar barStyle='light-content' />
                 <View style={styles.screencontainer}>
                     <View style={styles.screencontainerInner}>
                         <Component1

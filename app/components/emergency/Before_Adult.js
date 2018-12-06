@@ -9,7 +9,7 @@ export default class HomePage extends React.Component {
   render() {
     return (
         <ScrollView>
-        <StatusBar hidden />
+          <StatusBar barStyle='light-content' />
           <View style={styles.container}>
 
             <Image
@@ -39,18 +39,17 @@ export default class HomePage extends React.Component {
     },
     image: {
       width,
-      height: 650,
+      height: 600,
       position: 'relative',
       marginTop: 10,
     },
     main_btn: {
       height: 40,
-      width: 350,
+      width: 320,
       borderRadius: 8,
       backgroundColor: '#A50A0A',
-      marginTop: 6,
-      marginLeft: 35,
+      marginTop: -10,
+      marginLeft: 28,
       marginRight: 10,
-      marginBottom: 60,
-    }
+    },
   }

@@ -12,6 +12,7 @@
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
     "navigationbar-react-native": "0.0.5",
+    "pretty-ms": "^4.0.0",
     "react": "16.5.0",
     "react-moment": "^0.8.4",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
@@ -32,6 +33,7 @@
     "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.2",
     "react-navigation-material-bottom-tabs": "^1.0.0",
+    "react-navigation-tabs": "^1.0.1",
     "react-timer-machine": "^1.0.1",
     "top-bar-nav": "^1.2.2"
   },

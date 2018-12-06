@@ -1,10 +1,8 @@
 import React from 'react';
-
-import { StyleSheet, Text, View, Button, Image, TouchableOpacity, TouchableHighlight, ScrollView, StatusBar, Platform, SafeAreaView, Container, Title, Footer, TabBarIOS, Component, AppRegistry } from 'react-native';
-
-import { Icon } from 'react-native-elements';
-
-import { createAppContainer, createStackNavigator, DrawerItems, HeaderBackButton, StackNavigator } from 'react-navigation';
+import { StyleSheet, Text, View, Button, Image, TouchableOpacity, TouchableHighlight, ScrollView, StatusBar, Platform, SafeAreaView, Container, Title, FooterTab, Footer, TabBarIOS, Component, AppRegistry } from 'react-native';
+import { createAppContainer, TabNavigator, createBottomTabNavigator, createStackNavigator, DrawerItems, HeaderBackButton, StackNavigator } from 'react-navigation';
+import { BottomNavigation, Tab } from 'react-native-material-bottom-navigation'
+import Icon from 'react-native-vector-icons/MaterialIcons'
 
 
 import AuthScreen from './app/components/Auth';
@@ -71,7 +69,7 @@ const RootStack = createStackNavigator(
         height: 80,
     },
   },
-  },
+},
   Choose_Emer: {
     screen: Choose_Emer,
     navigationOptions: {
@@ -236,9 +234,9 @@ const AppContainer = createAppContainer(RootStack);
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.safeArea}>
-        <AppContainer />
-      </View>
+        <View style={styles.safeArea}>
+          <AppContainer />
+        </View>
     )
   }
 }

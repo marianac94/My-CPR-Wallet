@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, Button, Image, TouchableHighlight, ScrollView, StatusBar } from 'react-native';
+import { Text, View, Button, Image, TouchableHighlight, ScrollView, StatusBar, FooterTab, Icon, Title } from 'react-native';
 import { Input } from 'react-native-elements';
 import { Font } from 'expo';
 
@@ -9,7 +9,6 @@ export default class AuthScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', marginTop: 200 }}>
-        <StatusBar style={styles.statusbar} />
 
         <Image
           source={require('./images/Logo.png')}
@@ -36,10 +35,4 @@ export default class AuthScreen extends React.Component {
       </View>
     );
   }
-}
-
-const styles = {
-  statusbar: {
-    color: '#FFFFFF',
-  },
 }
